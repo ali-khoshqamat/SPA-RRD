@@ -1,17 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AboutUsPage from "./pages/AboutUsPage";
-import Profile from "./pages/ProfilePage";
 import Layout from "./Layout/Layout";
+import routes from "./routes";
 
 function App() {
   return (
     <div className="w-full h-screen bg-slate-50 p-6">
       <Layout>
         <Routes>
-          <Route path="/" exact={true} element={<HomePage />} />
-          <Route path="/about-us" element={<AboutUsPage />} />
-          <Route path="/profile" element={<Profile />} />
+          {routes.map((route) => (
+            <Route {...route} key={route.path} />
+          ))}
         </Routes>
       </Layout>
     </div>
