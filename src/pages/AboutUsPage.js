@@ -1,4 +1,4 @@
-function AboutUsPage(props) {
+function AboutUsPage() {
   return <p>This is About-us Page!</p>;
 }
 

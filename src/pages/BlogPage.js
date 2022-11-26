@@ -1,20 +1,19 @@
 import { NavLink } from "react-router-dom";
 
 const items = [
-  { name: "Home", to: "/" },
-  { name: "About-us", to: "/about-us" },
-  { name: "Profile", to: "/profile" },
-  { name: "Blogs", to: "/blogs" },
-  { name: "Post", to: "/post" },
+  { name: "Blog-1", to: "/blogs/1" },
+  { name: "Blog-2", to: "/blogs/2" },
+  { name: "Blog-3", to: "/blogs/3" },
 ];
 
-const Navigation = () => {
+const BlogPage = () => {
   return (
-    <nav className="bg-slate-200 p-5 rounded-lg font-bold">
-      <ul className="flex items-center gap-x-5">
+    <div>
+      <h2>This is Blogs Page!</h2>
+      <ul className="">
         {items.map((item) => {
           return (
-            <li key={item.to}>
+            <li key={item.to} className="text-red-600">
               <NavLink
                 to={item.to}
                 className={({ isActive }) => (isActive ? "text-red-600" : "")}
@@ -25,8 +24,8 @@ const Navigation = () => {
           );
         })}
       </ul>
-    </nav>
+    </div>
   );
 };
 
-export default Navigation;
+export default BlogPage;

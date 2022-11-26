@@ -1,5 +1,4 @@
-function HomePage(props) {
-  // console.log(props);
+function HomePage() {
   return <p>This is Home Page!</p>;
 }
 
