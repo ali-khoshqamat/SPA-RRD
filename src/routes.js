@@ -8,7 +8,7 @@ import ProfilePage from "./pages/ProfilePage";
 
 const routes = [
   { path: "/about-us", element: <AboutUsPage /> },
-  { path: "/profile", element: <ProfilePage /> },
+  { path: "/profile/*", element: <ProfilePage /> },
   { path: "/blogs/:id", element: <Blog /> },
   { path: "/blogs", element: <BlogPage /> },
   { path: "/post/:id", element: <PostPage /> },
