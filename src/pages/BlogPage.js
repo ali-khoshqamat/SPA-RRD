@@ -15,7 +15,7 @@ const BlogPage = () => {
           return (
             <li key={item.to} className="text-red-600">
               <NavLink
-                to={item.to}
+                to={{ pathname: item.to, search: "sort=name&age=20" }}
                 className={({ isActive }) => (isActive ? "text-red-600" : "")}
               >
                 {item.name}

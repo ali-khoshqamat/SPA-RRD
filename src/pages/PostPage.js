@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 
 const PostPage = () => {
   const params = useParams();
-  console.log(params);
+  // console.log(params);
   const id = params.id || 1;
   return (
     <div className="flex flex-col justify-between h-full">
